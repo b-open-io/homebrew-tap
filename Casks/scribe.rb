@@ -9,9 +9,17 @@ cask "scribe" do
 
   app "Scribe.app"
 
+  # Remove quarantine flag since app is not code-signed
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Scribe.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/Scribe",
     "~/Library/Preferences/cool.scribe.plist",
     "~/Library/Caches/Scribe",
+    "~/.scribe",
   ]
 end
