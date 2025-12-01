@@ -1,20 +1,13 @@
 cask "scribe" do
   version "0.0.1"
-  sha256 :no_check # Update with actual SHA256 once DMG is built
+  sha256 "d379cb85c14b45c8e79e4dac58d6e122b79fa7028e3ce04ce5dd61b91f6d4de8"
 
-  url "https://github.com/b-open-io/scribe/releases/download/v#{version}/Scribe-#{version}.dmg"
+  url "https://jkygjvqfie32bnvq.public.blob.vercel-storage.com/releases/Scribe-#{version}.dmg"
   name "Scribe"
   desc "Timeline-based work evidence aggregator"
   homepage "https://scribe.cool"
 
   app "Scribe.app"
-
-  # Remove quarantine flag since app is not code-signed
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Scribe.app"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Application Support/Scribe",
