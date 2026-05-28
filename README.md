@@ -5,14 +5,14 @@ Custom Homebrew tap for Scribe and other tools.
 ## Installation
 
 ```bash
-brew tap rohenaz/tap
+brew tap b-open-io/tap
 brew install --cask scribe
 ```
 
 Or in one command:
 
 ```bash
-brew install --cask rohenaz/tap/scribe
+brew install --cask b-open-io/tap/scribe
 ```
 
 ## Available Casks
