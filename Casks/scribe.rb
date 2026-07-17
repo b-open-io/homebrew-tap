@@ -1,6 +1,6 @@
 cask "scribe" do
-  version "0.0.87"
-  sha256 "d33c8f0056eb55843183aa06b2a744edec7d4efab33d509d5b6b8f797ade1a11"
+  version "0.0.88"
+  sha256 "9e47f272cc0f36c61bbd690a5563ff1effc7244af99d12e9aa934c5953bcca19"
 
   url "https://jkygjvqfie32bnvq.public.blob.vercel-storage.com/releases/Scribe-#{version}.dmg"
   name "Scribe"
